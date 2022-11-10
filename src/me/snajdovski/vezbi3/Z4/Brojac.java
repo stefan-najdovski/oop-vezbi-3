@@ -1,5 +1,7 @@
 package me.snajdovski.vezbi3.Z4;
 
+import java.util.Random;
+
 public class Brojac {
     //num of fallen coins
     public int brojNaFrlanja;
@@ -8,15 +10,32 @@ public class Brojac {
     //num of P
     public int brojNaP = 0;
 
-    public int incrementG(){
-        return this.brojNaG++;
-    }
-    public int incrementP(){
-        return this.brojNaP++;
+
+    //simulation of coin flip
+    public void simulirajFrlanjeNaParicka(int brojNaFrlanja){
+        for(int i = 0; i < brojNaFrlanja; i++){
+            Random rand = new Random();
+            int randomNum = rand.nextInt(2);
+            if(randomNum == 0){
+                this.incrementG();
+            }else{
+                this.incrementP();
+            }
+            this.incrementBrojNaFrlanja();
+        }
     }
 
-    public int incrementBrojNaFrlanja(){
-        return this.brojNaFrlanja++;
+
+
+    public void incrementG(){
+        this.brojNaG++;
+    }
+    public void incrementP(){
+        this.brojNaP++;
+    }
+
+    public void incrementBrojNaFrlanja(){
+        this.brojNaFrlanja++;
     }
 
     public int getBrojNaP() {
@@ -36,5 +55,4 @@ public class Brojac {
         brojNaG = 0;
         brojNaP = 0;
     }
-
 }

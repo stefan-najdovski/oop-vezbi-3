@@ -3,7 +3,6 @@ package me.snajdovski.vezbi3;
 import me.snajdovski.vezbi3.Z1.Avtomobil;
 import me.snajdovski.vezbi3.Z2.Fakultet;
 import me.snajdovski.vezbi3.Z3.PC;
-import me.snajdovski.vezbi3.Z4.Brojac;
 import me.snajdovski.vezbi3.Z4.Paricka;
 
 public class Main {
@@ -49,11 +48,9 @@ public class Main {
         p1.pecatiBrojNaFrlanja();
         p1.pecatiP();
         p1.pecatiG();
-        p1.pecatiVoProcenti();
         p1.reset();
         p1.inputBrojNaFrlanja();
         p1.pecatiP();
         p1.pecatiG();
-        p1.pecatiVoProcenti();
     }
 }
